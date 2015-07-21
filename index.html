@@ -1,0 +1,19 @@
+<head>
+  <title>hello</title>
+</head>
+
+<body>
+  <div class="contain">
+    <div class="video">
+      <div class="comment-contain"></div>
+    </div>
+    {{> comment}}
+  </div>
+</body>
+
+<template name="comment">
+  <div class="input">
+    <input type="text" id="msg">
+    <button>Click Me</button>
+  </div>
+</template>

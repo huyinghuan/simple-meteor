@@ -1,0 +1,46 @@
+.contain{
+    width: 98%;
+    margin: 0 auto;
+}
+
+.video{
+    height: 300px;
+    width: 100%;
+    background-color: #cccccc;
+    position: relative;
+}
+
+.input{
+    margin-top: 20px;
+}
+.comment-contain{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+}
+
+.comment{
+    font-size: 30px;
+}
+
+.comment.red{
+    color: red;
+}
+
+.comment.green{
+    color: green;
+}
+
+.comment.black{
+    color: black;
+    font-weight: bold;
+}
+
+.comment.blue{
+    color: #2f73cd;
+}
+
+.comment.yellow{
+    color: #cdad2d;
+}

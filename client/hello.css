@@ -6,6 +6,7 @@
 .video{
     height: 300px;
     width: 100%;
+    overflow-x: hidden;
     background-color: #cccccc;
     position: relative;
 }
@@ -13,6 +14,19 @@
 .input{
     margin-top: 20px;
 }
+
+.input input{
+    line-height: 42px;
+    width: 70%
+}
+
+.input button{
+    height: 50px;
+    border-radius: 8px;
+    width: 20%;
+    float: right;
+}
+
 .comment-contain{
     position: absolute;
     width: inherit;
@@ -21,7 +35,10 @@
 }
 
 .comment{
-    font-size: 30px;
+    font-size: 28px;
+    line-height: 30px;
+    max-height: 30px;
+    overflow-y: hidden;
 }
 
 .comment.red{

@@ -1,5 +1,5 @@
 Template.Test.onRendered(()->
-  CM = new MyCommentManager($(".comment-contain")[0])
+  CM = new share.DanMu($(".comment-contain"))
   Message.find({status: 0}).observeChanges({
     added: (id, fields)->
       CM.insert(id, fields, (id)->
@@ -12,6 +12,7 @@ Template.Test.events({
   'click button': ->
     value = $("#msg").val()
     return if(!value)
-    Meteor.call('insertMessage', value)
+    type = $("#type").val()
+    Meteor.call('insertMessage', value, type)
     $("#msg").val("")
 })

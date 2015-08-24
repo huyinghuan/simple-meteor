@@ -13,13 +13,13 @@ Meteor.methods({
     @params {string} optional 消息类型 default: 'base'
     @params {object} optional 其他选项
   ###
-  "insertMessage": (msg, type, options = {})->
+  "insertMessage": (msg, type ="base", options = {})->
     msg = escapeHtml(msg)
     ###
       TODO
        1. 根据是否登录, 角色信息 限制type类型
        2. 根据是否登录, 角色信息 限制options内容
-       3. 选取合适字段，options
+       3. 选取合法字段，options
     ###
 
     owner = {
@@ -27,8 +27,9 @@ Meteor.methods({
     }
     Message.insert(
       {
-        msg: msg,
+        content: msg,
         status: 0,
+        type: type,
         height: Math.random(),
         options: options
         owner: owner

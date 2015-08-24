@@ -1,3 +1,3 @@
 Meteor.publish('message', ->
-  return Message.find({})
+  return Message.find({},  {fields: {owner: 0}})
 )
